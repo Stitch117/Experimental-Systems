@@ -44,25 +44,25 @@ MonoBehaviour:
       m_Variable: {fileID: 0}
     m_List:
     - stateName: disabled
-      animationStateStartValue: {r: 0, g: 0, b: 0, a: 0}
-      animationStateEndValue: {r: 0, g: 0, b: 0, a: 0}
+      animationStateStartValue: {r: 0.4716981, g: 0.4716981, b: 0.4716981, a: 0}
+      animationStateEndValue: {r: 0.46226418, g: 0.46226418, b: 0.46226418, a: 0}
     - stateName: idle
-      animationStateStartValue: {r: 0, g: 0, b: 0, a: 0}
-      animationStateEndValue: {r: 0, g: 0, b: 0, a: 0}
+      animationStateStartValue: {r: 0.8113208, g: 0.8113208, b: 0.8113208, a: 0}
+      animationStateEndValue: {r: 0.7924528, g: 0.7924528, b: 0.7924528, a: 0}
     - stateName: hovered
-      animationStateStartValue: {r: 0.09411765, g: 0.4392157, b: 0.7137255, a: 1}
+      animationStateStartValue: {r: 0.23718406, g: 0.535939, b: 0.7735849, a: 1}
       animationStateEndValue: {r: 0.09411765, g: 0.4392157, b: 0.7137255, a: 1}
     - stateName: hoveredPriority
-      animationStateStartValue: {r: 0, g: 0, b: 0, a: 0}
-      animationStateEndValue: {r: 0, g: 0, b: 0, a: 0}
+      animationStateStartValue: {r: 0.20990565, g: 0.69605726, b: 0.8396226, a: 0}
+      animationStateEndValue: {r: 0.15619439, g: 0.71303487, b: 0.8490566, a: 0}
     - stateName: selected
       animationStateStartValue: {r: 0.1254902, g: 0.5882353, b: 0.9529412, a: 1}
-      animationStateEndValue: {r: 0.1254902, g: 0.5882353, b: 0.9529412, a: 1}
+      animationStateEndValue: {r: 0.9529412, g: 0.538576, b: 0.12549017, a: 1}
     - stateName: activated
-      animationStateStartValue: {r: 0.56078434, g: 0.79607844, b: 0.9764706, a: 0}
-      animationStateEndValue: {r: 0.56078434, g: 0.79607844, b: 0.9764706, a: 0}
+      animationStateStartValue: {r: 1, g: 0.24020335, b: 0, a: 0}
+      animationStateEndValue: {r: 1, g: 0.31244847, b: 0, a: 0}
     - stateName: focused
-      animationStateStartValue: {r: 0.56078434, g: 0.79607844, b: 0.9764706, a: 0}
-      animationStateEndValue: {r: 0.56078434, g: 0.79607844, b: 0.9764706, a: 0}
+      animationStateStartValue: {r: 0.8301887, g: 0, b: 0.025429169, a: 0}
+      animationStateEndValue: {r: 1, g: 0.0897288, b: 0, a: 0}
     m_ColorBlendMode: 0
     m_BlendAmount: 1
