@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Anchor
   - Ammo
+  - Bullet
   layers:
   - Default
   - TransparentFX

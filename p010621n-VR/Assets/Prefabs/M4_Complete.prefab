@@ -214,7 +214,6 @@ GameObject:
   - component: {fileID: 8736918124875977186}
   - component: {fileID: 993946685354208042}
   - component: {fileID: 372626578710932512}
-  - component: {fileID: 9032407649517520348}
   m_Layer: 0
   m_Name: M4_Complete
   m_TagString: Untagged
@@ -414,19 +413,6 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 1
---- !u!114 &9032407649517520348
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1964427232804731776}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b3490e8371ed23429a22d46cd463b1c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_BulletPrefab: {fileID: 5426395967101067476, guid: 5f37a0729f4266e4da34e3bfd4fa88c5, type: 3}
 --- !u!1 &3285571073928880314
 GameObject:
   m_ObjectHideFlags: 0
