@@ -19,7 +19,7 @@ public class Ballloon : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Bullet"))
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 }
