@@ -16,6 +16,11 @@ public class XRInfiniteDispenser : MonoBehaviour
         Assert.IsNotNull(m_InteractablePrefab);
     }
 
+    private void OnApplicationQuit()
+    {
+        m_Socket.selectExited.RemoveListener(OnSelectEntered);
+    }
+
     private void OnEnable()
     {
         m_Socket.selectExited.AddListener(OnSelectEntered);

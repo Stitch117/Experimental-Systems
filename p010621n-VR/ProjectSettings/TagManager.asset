@@ -8,6 +8,8 @@ TagManager:
   - Ammo
   - Bullet
   - Balloon
+  - Coconut
+  - Ball
   layers:
   - Default
   - TransparentFX
