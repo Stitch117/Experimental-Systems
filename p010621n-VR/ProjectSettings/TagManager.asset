@@ -10,6 +10,8 @@ TagManager:
   - Balloon
   - Coconut
   - Ball
+  - WaterBullet
+  - Clown
   layers:
   - Default
   - TransparentFX
