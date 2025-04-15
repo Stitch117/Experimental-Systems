@@ -9,8 +9,18 @@ public class PrizeManager : MonoBehaviour
         OnCondition
     }
 
+    public enum PrizeLevel
+    {
+        Big,
+        Medium,
+        Small,
+        Fail
+    }
+
     public HowToWin m_CurrentWinStyle = HowToWin.OnReset;
     [SerializeField] TextMeshProUGUI m_Text;
+
+    public PrizeLevel m_PrizeLevel;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
