@@ -1,4 +1,4 @@
-Credits:
+Credits: 
 Ferris wheel model (not rotating) : Glowbox3D (sketchFab)
 Side Stalls : SevenFour (sketchfab)
 Coconut : matousekfoto (sketchFab)
@@ -16,3 +16,10 @@ Canon : carlosbarrera_10 (sketchfab)
 Paddle for string ball : Weekless (sketchfab)
 Boomerang : Muhammad Ari Kurniawan (sketchfab)
 Bin : Blaž Mraz (sketchfab)
+Toy car : FreddieSign (sketchfab)
+Sword : Evgenia Karabetskaya (sketchfab)
+Shiba dog : zixisun02 (sketchfab)
+Ship in a bottle : Loïc Norgeot (sketchfab)
+Dragon : 3DHaupt (sketchfab)
+Cat : Suushimi✨ (sketchfab)
+
