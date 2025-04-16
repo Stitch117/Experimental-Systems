@@ -575,8 +575,8 @@ MonoBehaviour:
   m_BigPrizes:
   - {fileID: 7683500388946877289, guid: 573d34a5aaebb7c4d81e26b84e56b085, type: 3}
   - {fileID: 8350156371018968390, guid: 89018bbf434b630428f285ebeb68219a, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8909709551514893250, guid: 86b97d81b659f044988a98dcec944ee1, type: 3}
+  - {fileID: 7350108013217942514, guid: 278d9edbe512fa8409b69b9699a34c16, type: 3}
   m_MediumPrizes:
   - {fileID: 0}
   - {fileID: 0}
