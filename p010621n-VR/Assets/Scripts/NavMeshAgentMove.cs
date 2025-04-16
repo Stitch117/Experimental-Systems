@@ -6,6 +6,7 @@ public class NavMeshAgentMove : MonoBehaviour
     NavMeshAgent m_Agent;
     float timerToResetMovement = 3.0f;
     NavMeshHit m_Hit;
+    public float m_MaxDistance;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -20,7 +21,7 @@ public class NavMeshAgentMove : MonoBehaviour
         if (timerToResetMovement <= 0 )
         {
             ChangeTargetPos();
-            timerToResetMovement = 3.0f;
+            timerToResetMovement = 2.0f;
         }
 
         timerToResetMovement -= Time.deltaTime;
@@ -28,10 +29,10 @@ public class NavMeshAgentMove : MonoBehaviour
 
     void ChangeTargetPos()
     {
-        Vector3 randomDirection = Random.insideUnitSphere * 3;
+        Vector3 randomDirection = Random.insideUnitSphere * m_MaxDistance;
         randomDirection += transform.position;
 
-        NavMesh.SamplePosition(randomDirection, out m_Hit, 3, NavMesh.AllAreas);
+        NavMesh.SamplePosition(randomDirection, out m_Hit, m_MaxDistance, NavMesh.AllAreas);
         m_Agent.SetDestination(m_Hit.position);
     }
 }

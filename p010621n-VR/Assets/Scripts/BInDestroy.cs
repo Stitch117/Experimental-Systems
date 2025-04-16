@@ -16,9 +16,6 @@ public class BInDestroy : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (!collision.gameObject.CompareTag("Bin"))
-        {
-            Destroy(collision.gameObject);
-        }
+        Destroy(collision.gameObject);
     }
 }

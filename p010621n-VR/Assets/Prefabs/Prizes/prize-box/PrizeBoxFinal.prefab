@@ -578,16 +578,16 @@ MonoBehaviour:
   - {fileID: 8909709551514893250, guid: 86b97d81b659f044988a98dcec944ee1, type: 3}
   - {fileID: 7350108013217942514, guid: 278d9edbe512fa8409b69b9699a34c16, type: 3}
   m_MediumPrizes:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 5231929493746254460, guid: 8e044efd2b35f3e459ca15f94b80ad8e, type: 3}
+  - {fileID: 6321674079680559011, guid: 9f5e42275cf1e0e4aa7e05d567200c1b, type: 3}
+  - {fileID: 5281262051818256770, guid: 6068ee4457f80064da68880a4f509598, type: 3}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   m_SmallPrizes:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 2642137993003142981, guid: 37f287b86dbf9bb418e912a771f7f181, type: 3}
+  - {fileID: 412028181999825393, guid: c5c9d1c9f5e1e2b48aac12220864b954, type: 3}
+  - {fileID: 70882312830289764, guid: 37a9f43a0333bf5459d7dd127186574a, type: 3}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
