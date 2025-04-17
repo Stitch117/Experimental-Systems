@@ -581,18 +581,18 @@ MonoBehaviour:
   - {fileID: 5231929493746254460, guid: 8e044efd2b35f3e459ca15f94b80ad8e, type: 3}
   - {fileID: 6321674079680559011, guid: 9f5e42275cf1e0e4aa7e05d567200c1b, type: 3}
   - {fileID: 5281262051818256770, guid: 6068ee4457f80064da68880a4f509598, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 338225055518088392, guid: 1b402786f4f3f464e9c18e1540e1b275, type: 3}
+  - {fileID: 392834859195283462, guid: 642f26965f852c144ad4af4808e3c9e8, type: 3}
+  - {fileID: 2023509917075675407, guid: a81f0aed1ef9dc846bf8dd65a857600f, type: 3}
   m_SmallPrizes:
   - {fileID: 2642137993003142981, guid: 37f287b86dbf9bb418e912a771f7f181, type: 3}
   - {fileID: 412028181999825393, guid: c5c9d1c9f5e1e2b48aac12220864b954, type: 3}
   - {fileID: 70882312830289764, guid: 37a9f43a0333bf5459d7dd127186574a, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 272406627321447365, guid: b87790cad8f2cf844a95e525dfbffe83, type: 3}
+  - {fileID: 6350774082965983088, guid: cba46923ecdb9544fb84eb7128785b4f, type: 3}
+  - {fileID: 7030792272676109688, guid: 726ba8ceaa5ad9643a2d9776dc18fa9e, type: 3}
+  - {fileID: 5864503256754377449, guid: bfd6b6e76b5d81a419a3344be7c75498, type: 3}
+  - {fileID: 1835132494953667504, guid: db81621d1d4a7f24faf58922ec2a25c4, type: 3}
+  - {fileID: 8300467361435971081, guid: 29e67eb45073621419c6e902581534ff, type: 3}
+  - {fileID: 2676539572155556828, guid: 9d888020872384d489bae278bf43c6f8, type: 3}
   m_Handle: {fileID: 2633254042396954722}
