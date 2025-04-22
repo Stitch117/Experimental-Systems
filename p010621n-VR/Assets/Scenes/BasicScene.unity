@@ -27426,6 +27426,49 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7187732187479404da44bc9ef3696d82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_PrizeTransform: {fileID: 1410204334}
+  m_PrizeBoxPrefab: {fileID: 7931649484647791613, guid: 4454391cf1eb8f54590ed15672490dc4, type: 3}
+  m_PrizeIcons:
+  - {fileID: 550107015}
+  - {fileID: 1942545393}
+  - {fileID: 936913610}
+  - {fileID: 1094431543}
+  - {fileID: 547805995}
+  - {fileID: 391267092}
+  - {fileID: 1250929052}
+  - {fileID: 1014454946}
+  - {fileID: 447411169}
+  - {fileID: 1043785164}
+  - {fileID: 292989394}
+  - {fileID: 2121014359}
+  - {fileID: 1298527334}
+  - {fileID: 1911423}
+  - {fileID: 151823895}
+  - {fileID: 535124291}
+  - {fileID: 531377637}
+  - {fileID: 2106073334}
+  - {fileID: 347061966}
+  - {fileID: 2021622728}
+  - {fileID: 813155954}
+  - {fileID: 1313479003}
+  - {fileID: 1928927330}
+  - {fileID: 466197531}
+  - {fileID: 1980912865}
+  - {fileID: 1729597432}
+  - {fileID: 1569293240}
+  - {fileID: 1737076003}
+  - {fileID: 685046185}
+  - {fileID: 196366577}
+  - {fileID: 1297990597}
+  - {fileID: 1134025107}
+  - {fileID: 834304727}
+  - {fileID: 1043125514}
+  - {fileID: 397814997}
+  - {fileID: 1936186116}
+  - {fileID: 1626134358}
+  - {fileID: 48396575}
+  - {fileID: 1514042327}
+  - {fileID: 2093492255}
   m_CurrentWinStyle: 0
   m_Text: {fileID: 1247938231}
   m_PrizeLevel: 0
@@ -27438,7 +27481,7 @@ Transform:
   m_GameObject: {fileID: 925441977}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.738358, y: -36.208347, z: 125.554855}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -38210,6 +38253,37 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &1410204334
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1410204335}
+  m_Layer: 0
+  m_Name: PrizeBox Transform
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1410204335
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1410204334}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.938422, z: -0, w: 0.34549126}
+  m_LocalPosition: {x: 7.333, y: 0.283, z: 4.704}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -139.576, z: 0}
 --- !u!1 &1412169538
 GameObject:
   m_ObjectHideFlags: 0
@@ -40528,6 +40602,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ClownAmount: 16
+  m_PrizeManager: {fileID: 0}
 --- !u!1 &1492149886
 GameObject:
   m_ObjectHideFlags: 0
@@ -44718,6 +44793,8 @@ MonoBehaviour:
   - {fileID: 53051585}
   - {fileID: 405634231}
   - {fileID: 2031435903}
+  m_PrizeManager: {fileID: 925441978}
+  m_BallsThrown: 0
 --- !u!1 &1593690322
 GameObject:
   m_ObjectHideFlags: 0
@@ -50958,6 +51035,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_BulletPrefab: {fileID: 5426395967101067476, guid: 5f37a0729f4266e4da34e3bfd4fa88c5, type: 3}
   m_FireTransform: {fileID: 525126054}
+  m_BalloonManager: {fileID: 2143665268}
+  m_PrizeManager: {fileID: 925441978}
 --- !u!114 &1819442778 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 372626578710932512, guid: 17f7b1b4c142fbf409cc4cf9f8669ce6, type: 3}
@@ -61695,6 +61774,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BalloonsAmount: 16
+  m_PrizeManager: {fileID: 925441978}
 --- !u!1 &2146548260
 GameObject:
   m_ObjectHideFlags: 0
@@ -61947,6 +62027,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ball
       objectReference: {fileID: 0}
+    - target: {fileID: 3157359646797978331, guid: 5d43148d4b929a944967b54afb8cab97, type: 3}
+      propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3157359646797978331, guid: 5d43148d4b929a944967b54afb8cab97, type: 3}
+      propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3157359646797978331, guid: 5d43148d4b929a944967b54afb8cab97, type: 3}
+      propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 7311636074455849741}
+    - target: {fileID: 3157359646797978331, guid: 5d43148d4b929a944967b54afb8cab97, type: 3}
+      propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3157359646797978331, guid: 5d43148d4b929a944967b54afb8cab97, type: 3}
+      propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ThrownCounter
+      objectReference: {fileID: 0}
+    - target: {fileID: 3157359646797978331, guid: 5d43148d4b929a944967b54afb8cab97, type: 3}
+      propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Ball, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3157359646797978331, guid: 5d43148d4b929a944967b54afb8cab97, type: 3}
+      propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8467619054788229311, guid: 5d43148d4b929a944967b54afb8cab97, type: 3}
       propertyPath: m_LocalPosition.x
       value: 12.070733
@@ -61990,8 +62098,16 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1353001717795507272, guid: 5d43148d4b929a944967b54afb8cab97, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7311636074455849741}
   m_SourcePrefab: {fileID: 100100000, guid: 5d43148d4b929a944967b54afb8cab97, type: 3}
+--- !u!1 &1632086554135869622 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1353001717795507272, guid: 5d43148d4b929a944967b54afb8cab97, type: 3}
+  m_PrefabInstance: {fileID: 1632086554135869621}
+  m_PrefabAsset: {fileID: 0}
 --- !u!23 &2192877588047897493
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -62579,12 +62695,25 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3157359646797978331, guid: 5d43148d4b929a944967b54afb8cab97, type: 3}
   m_PrefabInstance: {fileID: 1632086554135869621}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1632086554135869622}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7311636074455849741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1632086554135869622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bb7b0d37ee47664bb63596e8fc53b67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_CoconutManager: {fileID: 1588573352}
 --- !u!1001 &7513645400004378027
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -63208,6 +63337,7 @@ SceneRoots:
   - {fileID: 925441979}
   - {fileID: 522593853}
   - {fileID: 373969875}
+  - {fileID: 1410204335}
   - {fileID: 1820792703}
   - {fileID: 1267093743}
   - {fileID: 1965160905}

@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Inputs.Readers;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
+using System.Collections;
 
 public class GunScript : MonoBehaviour
 {
@@ -10,6 +11,11 @@ public class GunScript : MonoBehaviour
     XRBaseInteractable Ammo;
     int ammo = 0;
     float bulletSpeed = 30.0f;
+
+    [SerializeField] BalloonManager m_BalloonManager;    
+    [SerializeField] PrizeManager m_PrizeManager;    
+    int m_FiredShots;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -19,8 +25,21 @@ public class GunScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (m_PrizeManager.m_CurrentWinStyle == PrizeManager.HowToWin.OnCondition && m_FiredShots >= 10)
+        {
+            m_FiredShots = 0;
+            WaitAndSpawnPrize();
+        }
     }
+
+    IEnumerator WaitAndSpawnPrize()
+    {
+        yield return new WaitForSeconds(2);
+
+        m_BalloonManager.ResetBalloons();
+    }
+
+
 
     public void Fire()
     {
@@ -33,7 +52,7 @@ public class GunScript : MonoBehaviour
             }
 
             ammo -= 1;
-            
+            m_FiredShots++;
         }
     }
 

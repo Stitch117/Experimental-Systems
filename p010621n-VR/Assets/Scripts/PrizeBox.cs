@@ -10,6 +10,8 @@ public class PrizeBox : MonoBehaviour
     HingeJoint m_HandleHinge;
     PrizeManager m_PrizeManager;
 
+    public PrizeManager.PrizeLevel m_PrizeLevel;
+
     private int m_PrizeNumber = -1;
 
     private float m_TotalRotation = 0f;
@@ -35,27 +37,29 @@ public class PrizeBox : MonoBehaviour
 
         if (Mathf.Abs(m_TotalRotation) >= 1080.0f)
         {
-            MakePrize(m_PrizeManager.m_PrizeLevel);
+            MakePrize();
         }
     }
 
-    public void MakePrize(PrizeManager.PrizeLevel prizeLevel)
+    public void MakePrize()
     {
-        if (prizeLevel == PrizeManager.PrizeLevel.Big)
+        if (m_PrizeLevel == PrizeManager.PrizeLevel.Big)
         {
             m_PrizeNumber = Random.Range(0, m_BigPrizes.Length - 1);
             Instantiate(m_BigPrizes[m_PrizeNumber], transform.position, transform.rotation);
         }
-        else if (prizeLevel == PrizeManager.PrizeLevel.Medium)
+        else if (m_PrizeLevel == PrizeManager.PrizeLevel.Medium)
         {
             m_PrizeNumber = Random.Range(0, m_MediumPrizes.Length - 1);
             Instantiate(m_MediumPrizes[m_PrizeNumber], transform.position, transform.rotation);
         }
-        else if (prizeLevel == PrizeManager.PrizeLevel.Small)
+        else if (m_PrizeLevel == PrizeManager.PrizeLevel.Small)
         {
             m_PrizeNumber = Random.Range(0, m_SmallPrizes.Length - 1);
             Instantiate(m_SmallPrizes[m_PrizeNumber], transform.position, transform.rotation);
         }
+
+        m_PrizeManager.ChangeUI(m_PrizeLevel, m_PrizeNumber);
 
         m_PrizeNumber = -1;
         Destroy(m_Handle);
