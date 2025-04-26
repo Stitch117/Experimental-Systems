@@ -24,22 +24,14 @@ public class CoconutManager : MonoBehaviour
 
     private void Update()
     {
-        if (m_PrizeManager.m_CurrentWinStyle == PrizeManager.HowToWin.OnCondition && m_BallsThrown >= 3)
+        if (m_PrizeManager.m_CurrentWinStyle == PrizeManager.HowToWin.OnCondition && m_BallsThrown >= 10)
         {
-            WaitAndSpawnPrize();
-            for (int i = 0; i < m_BallsThrown; i++)
-            {
-                Destroy(FindFirstObjectByType<Ball>());
-            }
+            ResetPositions();
         }
+
+        Debug.Log(m_BallsThrown);
     }
 
-    IEnumerator WaitAndSpawnPrize()
-    {
-        yield return new WaitForSeconds(2);
-
-        ResetPositions();
-    }
 
     public void ResetPositions()
     {

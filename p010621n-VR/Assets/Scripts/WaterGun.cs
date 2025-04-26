@@ -1,5 +1,6 @@
 using System.Collections;
 using TMPro;
+using Unity.Collections.LowLevel.Unsafe;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
@@ -15,7 +16,7 @@ public class WaterGun : MonoBehaviour
     bool Firing = false;
 
     bool m_IsActive = false;
-    float m_Timer = 120.0f;
+    float m_Timer = 90.0f;
     [SerializeField] TextMeshProUGUI m_Text;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -48,19 +49,20 @@ public class WaterGun : MonoBehaviour
             ResetGrab();
             ResetRot();
             m_IsActive = false;
-            m_Timer = 120.0f;
+            m_Timer = 90.0f;
             m_ClownManager.ResetClowns();
         }
 
 
         //update timer text
-        float minutes = m_Timer / 60;
-        float seconds = m_Timer % 60;
-        if (seconds < 10.0f)
+        int minutes = (int) m_Timer / 60;
+        int seconds = (int) m_Timer % 60;
+        string StringSeconds = seconds.ToString();
+        if (seconds < 10)
         {
-            seconds = '0' + seconds;
+            StringSeconds = "0" + seconds.ToString();
         }
-        m_Text.text = minutes + ":" + seconds;
+        m_Text.text = minutes + ":" + StringSeconds;
     }
 
     IEnumerator ResetGrab()

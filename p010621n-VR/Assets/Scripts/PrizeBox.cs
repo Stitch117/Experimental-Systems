@@ -22,7 +22,6 @@ public class PrizeBox : MonoBehaviour
     {
         m_PrizeManager = FindFirstObjectByType<PrizeManager>();
         m_HandleHinge = m_Handle.GetComponent<HingeJoint>();
-
         m_LastAngle = m_HandleHinge.angle;
     }
 

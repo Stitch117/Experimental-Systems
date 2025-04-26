@@ -14,7 +14,7 @@ public class GunScript : MonoBehaviour
 
     [SerializeField] BalloonManager m_BalloonManager;    
     [SerializeField] PrizeManager m_PrizeManager;    
-    int m_FiredShots;
+    public int m_FiredShots;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -28,16 +28,10 @@ public class GunScript : MonoBehaviour
         if (m_PrizeManager.m_CurrentWinStyle == PrizeManager.HowToWin.OnCondition && m_FiredShots >= 10)
         {
             m_FiredShots = 0;
-            WaitAndSpawnPrize();
+            m_BalloonManager.ResetBalloons();
         }
     }
 
-    IEnumerator WaitAndSpawnPrize()
-    {
-        yield return new WaitForSeconds(2);
-
-        m_BalloonManager.ResetBalloons();
-    }
 
 
 

@@ -5,6 +5,7 @@ public class BalloonManager : MonoBehaviour
     [SerializeField] int m_BalloonsAmount = 16;
     GameObject[] m_Balloons;
     [SerializeField] PrizeManager m_PrizeManager;
+    [SerializeField] GunScript m_GunScript;
 
     int m_PoppedBalloons = 0;
 
@@ -12,6 +13,7 @@ public class BalloonManager : MonoBehaviour
     {
         m_Balloons = new GameObject[m_BalloonsAmount];
         m_Balloons = GameObject.FindGameObjectsWithTag("Balloon");
+        m_GunScript = FindFirstObjectByType<GunScript>();
     }
 
     public void ResetBalloons()
@@ -25,12 +27,12 @@ public class BalloonManager : MonoBehaviour
             }
         }
 
-        if (m_PoppedBalloons >= 10)
+        if (m_PoppedBalloons >= 8)
         {
             m_PrizeManager.m_PrizeLevel = PrizeManager.PrizeLevel.Big;
             m_PrizeManager.SpawnPrizeBox();
         }
-        else if (m_PoppedBalloons >= 6)
+        else if (m_PoppedBalloons >= 5)
         {
             m_PrizeManager.m_PrizeLevel = PrizeManager.PrizeLevel.Medium;
             m_PrizeManager.SpawnPrizeBox();
@@ -42,5 +44,6 @@ public class BalloonManager : MonoBehaviour
         }
 
         m_PoppedBalloons = 0;
+        m_GunScript.m_FiredShots = 0;
     }
 }
