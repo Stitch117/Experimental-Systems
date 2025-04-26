@@ -6,7 +6,7 @@ public class PrizeBox : MonoBehaviour
     [SerializeField] GameObject[] m_MediumPrizes = new GameObject[6];
     [SerializeField] GameObject[] m_SmallPrizes = new GameObject[10];
 
-    [SerializeField] GameObject m_Handle;
+    GameObject m_Handle;
     HingeJoint m_HandleHinge;
     PrizeManager m_PrizeManager;
 
@@ -23,6 +23,7 @@ public class PrizeBox : MonoBehaviour
         m_PrizeManager = FindFirstObjectByType<PrizeManager>();
         m_HandleHinge = m_Handle.GetComponent<HingeJoint>();
         m_LastAngle = m_HandleHinge.angle;
+        m_Handle = GetComponentInChildren<Handle>().gameObject;
     }
 
     // Update is called once per frame
@@ -38,6 +39,8 @@ public class PrizeBox : MonoBehaviour
         {
             MakePrize();
         }
+
+        Debug.Log(m_TotalRotation);
     }
 
     public void MakePrize()
