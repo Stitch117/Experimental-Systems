@@ -29,7 +29,6 @@ public class CoconutManager : MonoBehaviour
             ResetPositions();
         }
 
-        Debug.Log(m_BallsThrown);
     }
 
 
