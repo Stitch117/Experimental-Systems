@@ -6,9 +6,10 @@ public class PrizeBox : MonoBehaviour
     [SerializeField] GameObject[] m_MediumPrizes = new GameObject[6];
     [SerializeField] GameObject[] m_SmallPrizes = new GameObject[10];
 
-    GameObject m_Handle;
+    [SerializeField] GameObject m_Handle;
     HingeJoint m_HandleHinge;
     PrizeManager m_PrizeManager;
+    AudioSource m_AudioSource;
 
     public PrizeManager.PrizeLevel m_PrizeLevel;
 
@@ -23,7 +24,7 @@ public class PrizeBox : MonoBehaviour
         m_PrizeManager = FindFirstObjectByType<PrizeManager>();
         m_HandleHinge = m_Handle.GetComponent<HingeJoint>();
         m_LastAngle = m_HandleHinge.angle;
-        m_Handle = GetComponentInChildren<Handle>().gameObject;
+        m_AudioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -45,6 +46,8 @@ public class PrizeBox : MonoBehaviour
 
     public void MakePrize()
     {
+        m_AudioSource.Play();
+
         if (m_PrizeLevel == PrizeManager.PrizeLevel.Big)
         {
             m_PrizeNumber = Random.Range(0, m_BigPrizes.Length - 1);
