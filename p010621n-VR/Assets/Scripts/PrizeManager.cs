@@ -9,6 +9,8 @@ public class PrizeManager : MonoBehaviour
 
     public GameObject[] m_PrizeIcons = new GameObject[40];
 
+    AudioSource m_PrizeAudioSource;
+
     public enum HowToWin
     {
         OnReset,
@@ -31,7 +33,7 @@ public class PrizeManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        m_PrizeAudioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -162,5 +164,10 @@ public class PrizeManager : MonoBehaviour
                 default:break;
             }
         }
+    }
+
+    public void PlaySound()
+    {
+        m_PrizeAudioSource.PlayOneShot(m_PrizeAudioSource.clip);
     }
 }

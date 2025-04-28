@@ -5,15 +5,17 @@ public class BalloonManager : MonoBehaviour
     [SerializeField] int m_BalloonsAmount = 16;
     GameObject[] m_Balloons;
     [SerializeField] PrizeManager m_PrizeManager;
-    [SerializeField] GunScript m_GunScript;
+    GunScript m_GunScript;
 
     int m_PoppedBalloons = 0;
+    AudioSource m_AudioSource;
 
     private void Awake()
     {
         m_Balloons = new GameObject[m_BalloonsAmount];
         m_Balloons = GameObject.FindGameObjectsWithTag("Balloon");
         m_GunScript = FindFirstObjectByType<GunScript>();
+        m_AudioSource = GetComponent<AudioSource>();
     }
 
     public void ResetBalloons()
@@ -45,5 +47,11 @@ public class BalloonManager : MonoBehaviour
 
         m_PoppedBalloons = 0;
         m_GunScript.m_FiredShots = 0;
+    }
+
+
+    public void PlaySound()
+    {
+        m_AudioSource.PlayOneShot(m_AudioSource.clip);
     }
 }

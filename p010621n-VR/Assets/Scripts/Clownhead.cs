@@ -3,12 +3,12 @@ using UnityEngine;
 public class Clownhead : MonoBehaviour
 {
     int health = 75;
-    AudioSource m_AudioSource;
+    [SerializeField] ClownManager m_ClownManager;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        m_AudioSource = GetComponent<AudioSource>();
+        
     }
 
     // Update is called once per frame
@@ -26,7 +26,7 @@ public class Clownhead : MonoBehaviour
 
             if (health <= 0)
             {
-                m_AudioSource.Play();
+                m_ClownManager.PlaySound();
                 gameObject.SetActive(false);
             }
         }

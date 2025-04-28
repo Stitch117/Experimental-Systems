@@ -8,11 +8,14 @@ public class ClownManager : MonoBehaviour
     [SerializeField] PrizeManager m_PrizeManager;
     int m_ClownsPopped = 0;
 
+    AudioSource m_AudioSource;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         m_Clowns = new GameObject[m_ClownAmount];
         m_Clowns = GameObject.FindGameObjectsWithTag("Clown");
+        m_AudioSource =  GetComponent<AudioSource>();
     }
 
     public void ResetClowns()
@@ -44,5 +47,10 @@ public class ClownManager : MonoBehaviour
         }
 
         m_ClownsPopped = 0;
+    }
+
+    public void PlaySound()
+    {
+        m_AudioSource.PlayOneShot(m_AudioSource.clip);
     }
 }
