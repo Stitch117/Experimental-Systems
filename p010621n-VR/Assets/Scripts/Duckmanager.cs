@@ -17,15 +17,19 @@ public class Duckmanager : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter(Collision collision)
-    { 
-        Debug.Log("COLISIONNNNNNN");
-        if(collision.gameObject.CompareTag("Duck"))
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.CompareTag("Duck"))
         {
-            collision.gameObject.AddComponent<XRGrabInteractable>();
-            m_PrizeManager.m_PrizeLevel = collision.gameObject.GetComponent<Duck>().m_PrizeLevel;
-            m_PrizeManager.SpawnPrizeBox();
+            if (other.gameObject.GetComponent<Duck>().m_Checked == false)
+            {
+                other.gameObject.GetComponent<Duck>().m_Checked = true;
+                other.gameObject.AddComponent<XRGrabInteractable>();
+                m_PrizeManager.m_PrizeLevel = other.gameObject.GetComponent<Duck>().m_PrizeLevel;
+                m_PrizeManager.SpawnPrizeBox();
+            }
         }
+        
     }
 
     public void ResetDucks()
@@ -38,6 +42,7 @@ public class Duckmanager : MonoBehaviour
             }
 
             m_Ducks[i].transform.position = m_Ducks[i].GetComponent<Duck>().m_StartPos;
+            m_Ducks[i].transform.rotation = m_Ducks[i].GetComponent<Duck>().m_StartRot;
         }
     }
 }

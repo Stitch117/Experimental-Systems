@@ -46,8 +46,6 @@ public class PrizeBox : MonoBehaviour
         {
             MakePrize();
         }
-
-        Debug.Log(m_TotalRotation);
     }
 
     public void MakePrize()
