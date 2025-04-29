@@ -73483,6 +73483,10 @@ PrefabInstance:
       propertyPath: m_ClownManager
       value: 
       objectReference: {fileID: 1491605545}
+    - target: {fileID: 1677910326893966263, guid: f78e7caa9e1d7d945aa05b7d209f59e9, type: 3}
+      propertyPath: m_PrizeManager
+      value: 
+      objectReference: {fileID: 925441978}
     - target: {fileID: 1746089107062008413, guid: f78e7caa9e1d7d945aa05b7d209f59e9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.159
