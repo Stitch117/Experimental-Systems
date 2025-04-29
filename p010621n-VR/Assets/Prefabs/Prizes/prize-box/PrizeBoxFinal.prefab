@@ -610,3 +610,4 @@ MonoBehaviour:
   - {fileID: 6350774082965983088, guid: cba46923ecdb9544fb84eb7128785b4f, type: 3}
   m_Handle: {fileID: 2633254042396954722}
   m_PrizeLevel: 0
+  m_SmokeEffect: {fileID: 1916158921024741226, guid: 829c4e296f3f70643919de41d0f389e6, type: 3}

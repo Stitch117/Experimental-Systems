@@ -18,6 +18,7 @@ public class WaterGun : MonoBehaviour
     bool m_IsActive = false;
     float m_Timer = 90.0f;
     [SerializeField] TextMeshProUGUI m_Text;
+    public PrizeManager m_PrizeManager;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -75,7 +76,10 @@ public class WaterGun : MonoBehaviour
     public void StartFiring()
     {
         Firing = true;
-        m_IsActive = true;
+        if (m_PrizeManager.m_CurrentWinStyle == PrizeManager.HowToWin.OnCondition)
+        {
+            m_IsActive = true;
+        }
     }
 
     public void StopFiring()

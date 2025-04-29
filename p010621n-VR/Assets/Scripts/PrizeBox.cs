@@ -17,12 +17,14 @@ public class PrizeBox : MonoBehaviour
     private float m_TotalRotation = 0f;
     private float m_LastAngle = 0f;
 
+    [SerializeField] GameObject m_SmokeEffect;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         m_PrizeManager = FindFirstObjectByType<PrizeManager>();
         m_HandleHinge = m_Handle.GetComponent<HingeJoint>();
-        m_LastAngle = m_HandleHinge.angle;
+        m_TotalRotation = 0f;
     }
 
     // Update is called once per frame
@@ -33,6 +35,12 @@ public class PrizeBox : MonoBehaviour
 
         m_TotalRotation += deltaAngle;
         m_LastAngle = currentAngle;
+
+        //Jimmy solution
+        if(float.IsNaN(m_TotalRotation))
+        {
+            m_TotalRotation = 0f;
+        }    
 
         if (Mathf.Abs(m_TotalRotation) >= 1080.0f)
         {
@@ -65,6 +73,7 @@ public class PrizeBox : MonoBehaviour
         m_PrizeManager.ChangeUI(m_PrizeLevel, m_PrizeNumber);
 
         m_PrizeNumber = -1;
+        Instantiate(m_SmokeEffect, transform.position, Quaternion.identity);
         Destroy(m_Handle);
         Destroy(gameObject);
     }

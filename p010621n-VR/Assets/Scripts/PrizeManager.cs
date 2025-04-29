@@ -57,8 +57,7 @@ public class PrizeManager : MonoBehaviour
     public void SpawnPrizeBox()
     {
         GameObject PrizeBox = Instantiate(m_PrizeBoxPrefab, m_PrizeTransform.transform.position, m_PrizeTransform.transform.rotation);
-        m_PrizeBox = PrizeBox.GetComponent<PrizeBox>();
-        m_PrizeBox.m_PrizeLevel = m_PrizeLevel;
+        PrizeBox.GetComponent<PrizeBox>().m_PrizeLevel = m_PrizeLevel;
     }
 
     public void ChangeUI(PrizeLevel prizeLevel, int prizeNumber)
